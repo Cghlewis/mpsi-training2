@@ -1,1 +1,3 @@
-# mpsi-training2
+Data management in large-scale education research training: Training 2: Data Structures
+
+Slides:
