@@ -467,7 +467,7 @@ For either of these options, on the first page of the survey, have them verify t
   
 --
 
-Other precautions to take:
+Other security precautions to take:
 
 * Instruct participants to close their browser at the completion of their survey
 * If you are collecting anonymous data, do not collect IP address
@@ -566,7 +566,7 @@ You can build this tracking database in any software you choose such as:
 * Microsoft Excel
 * Web-based platform such as QuickBase, Salesforce, or RedCap
 * A survey platftorm such as Qualtrics
-* Forms that feed into a SQL database
+* Forms that feed into a relational database
 
 My recommendation: *A relational database system that allows you to pull tables together using a query system*. 
 
@@ -682,20 +682,21 @@ The following can be placed into a separate demographics/participant table (rost
 * Randomization information (cohort, group)
 * Payment information (ex: W9)
 * Double IDs if you use these for data collection
-* Participant movement
+
 
 ---
 
 # Fields to include cont.
 
-If your study is longitudinal these are fields you will track over time (each wave of collection):
+If your study is longitudinal these are fields you will track over time (each wave of collection) and/or have in your data collection tables:
 
 * Data collected (each unique piece)
   * Observation complete (yes/no)
   * Interview complete (yes/no)
-* Notes
 * Payment/incentives provided
 * Participant movement
+* Notes
+
 
 .pull-left[
 
