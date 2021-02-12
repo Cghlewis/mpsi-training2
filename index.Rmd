@@ -338,7 +338,7 @@ If your participants or sites do not have access to internet or WiFi, there are 
 * If the assessment you have chosen for your study is only available in paper form, consider converting it to a web-based form
 
   + Build the assessment into an online survey platform
-  + Build your own application to collect data
+  + Or build your own application to collect data
   + Once data is collected, proceed with scoring as usual
 
 * If there are no web-based options (ex: Woodcock Johnson), or connecting to WiFi is not an option, keep with your paper assessment
@@ -574,6 +574,8 @@ My recommendation: *A relational database system that allows you to pull tables 
 * Decreases storage
 * Makes it much easier to update tables as changes occur
 
+Resource: [Microsoft](https://support.microsoft.com/en-us/office/database-design-basics-eb2159cf-1e30-401a-8084-bd4f9c9ca1f5)
+
 ---
 
 class: inverse
@@ -594,24 +596,27 @@ knitr::include_graphics("img/tables2.png")
 
 ---
 
-class: inverse
-
 # Querying a relational database
 
 Even though our student table does not have teacher name in it, we can now use a query to pull a roster together for every teacher.
 
-This query:
-
-```{r fig.align="center", echo=FALSE, out.width='90%'}
-knitr::include_graphics("img/query2.png")
-```
+This query:  
+`SELECT Student.stu_f_name, Student.stu_1_name, Teacher.tch_f_name, Teacher.tch_l_name,`   `Teacher.grade_level`  
+`FROM Student INNER JOIN Teacher ON Student.tch_id = Teacher.tch_id`  
+`WHERE consent_complete='Yes'`  
+`ORDER BY tch_l_name, tch_f_name`
 
 Would produce a roster like this:
+```{r echo=FALSE, out.width='10%', out.height= '50%'}
 
-```{r fig.align="center", echo=FALSE, out.width='60%'}
-knitr::include_graphics("img/query.png")
+tibble::tribble (~ stu_f_name, ~ stu_l_name, ~tch_f_name, ~tch_l_name, ~grade_level,
+                 "Johnny", "Rose", "Stevie", "Budd", 3,
+                 "Alexis", "Rose", "Stevie", "Budd", 3,
+                 "Patrick", "Brewer", "Twyla", "Sands", 4,
+                 "Ray", "Butani", "Twyla", "Sands", 4) %>%
+gt::gt()
+  
 ```
-
 
 ---
 
@@ -676,6 +681,7 @@ The following can be placed into a separate demographics/participant table (rost
 * Randomization information (cohort, group)
 * Payment information (ex: W9)
 * Double IDs if you use these for data collection
+* Participant movement
 
 ---
 
@@ -686,13 +692,13 @@ If your study is longitudinal these are fields you will track over time (each wa
 * Data collected (each unique piece)
   * Observation complete (yes/no)
   * Interview complete (yes/no)
-* Participant movement
 * Notes
 * Payment/incentives provided
+* Participant movement
 
 .pull-left[
 
-Student roster table
+Student roster/demographics table
 ```{r echo=FALSE, out.width='20%'}
 
 tibble::tribble (~ stu_id, ~ stu_f_name, ~stu_l_name, ~tch_id, ~email, ~dob,
@@ -738,7 +744,7 @@ There are a few best practices that improve project coordination and data manage
 
 Whether you are collecting original data, or you are working with existing data, you need to consider secure short-term data storage. First and foremost, follow your IRB rules. 
 
-Level of security with depend on the type of data:
+Level of security depends on the type of data:
 
 * Anonymous Data
   + Data at no time has ever had identifying information tied to it and can never be linked back to an individual
@@ -970,7 +976,7 @@ library(data.tree)
 project2 <- Node$new("project-name")
   lifecycle <- project2$AddChild("life-cycle-folder")
     time <- lifecycle$AddChild("time")
-      datatype <- time$AddChild("data-type")
+      datatype <- time$AddChild("content")
         participant <- datatype$AddChild("participant")
           archive <- participant$AddChild("archive")
           
@@ -983,7 +989,7 @@ print(project2)
 * Level 1: Project Name
 * Level 2: General research life cycle (data, documentation, project mgmt)
 * Level 3: Time period or grouping
-* Level 4: Specific data type (Ex: raw, syntax, clean)
+* Level 4: Specific content (Ex: raw, syntax, clean)
 * Level 5: Participant specific 
 * Level 6: Older versions of files
 
