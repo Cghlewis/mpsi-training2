@@ -1,0 +1,22 @@
+,,,,,,,,,,,,,Open-ended text,No validation,,,,Ambiguous name,,Two response options 
+,,,,,,,,,,,,,,,,,,,,
+Status,IPAddress,Progress,Duration (in seconds),Finished,RecordedDate,ResponseId,RecipientLastName,LocationLatitude,LocationLongitude,DistributionChannel,UserLanguage,,School,Date,Principal,Agree,Confident,Q4,Trust,Proficient
+Response Type,IP Address,Progress,Duration (in seconds),Finished,Recorded Date,Response ID,Recipient Last Name,Location Latitude,Location Longitude,Distribution Channel,User Language,,Enter the name of your school:,Enter the date: ,Select your ID from the list below:,The teachers and I agree on school goals.,I am confident in my ability to help the situation.,I believe I communicate effectively.,The teachers and I trust one another.,Enter the percent proficient in MAP math and MAP comm arts.
+0,140.32.195.33,100,76,1,12/20/2019 10:37,R_4I11YEakdS0KBYR,,39.10009766,-94.57820129,anonymous,EN,,North Middle,December 12th,1,5,15,5,5,40 and 50
+0,166.33.195.33,100,78,1,12/20/2019 10:40,R_a4CwFQAJpVIqw9z,,39.10009766,-94.57820129,anonymous,EN,,north  ,10/23/2019,2,5,15,5,5,30/60
+0,186.25.195.33,100,53,1,12/20/2019 10:43,R_12bC3Pg8WIxHGz2,,39.10009766,-94.57820129,anonymous,EN,,south mid,12/10/2019,3,5,14,5,5,20/25
+0,140.32.195.33,100,69,1,12/20/2019 10:47,R_25Y4FpYpUMvJhsz,,39.10009766,-94.57820129,anonymous,EN,,East middle,"nov. 12, 2019",4,5,15,5,5,55/36
+0,166.33.195.33,100,49,1,12/20/2019 10:49,R_1Nhb4XaPx9lcVkJ,,39.10009766,-94.57820129,anonymous,EN,,SOUTH,12/11/2019,5,5,14,5,5,25-45
+0,186.25.195.33,100,88,1,5/13/2020 13:51,R_24xa4g16NMTKyTh,,39.10009766,-94.57820129,anonymous,EN,,West Mid,10/24/2019,6,5,15,5,5,35/56
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,stu_id,s1_item1,s2_item1,s3_item1,s4_item1,,,,,,,,,,,,
+,,,,1268,5,4,,3,,,,,,,,,,,,
+,,,,1286,,,3,,,,,,,,,,,,,
+,,,,1306,2,3,5,1,,,,,,,,,,,,
+,,,,1246,5,4,3,4,,,,,,,,,,,,
