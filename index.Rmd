@@ -105,7 +105,7 @@ Source: [Meyer (2018)](https://journals.sagepub.com/doi/10.1177/2515245917747656
 
 # Consent form language
 
-* Compared to consent forms of the past, if you plan to share your data, language needs to be added to several **sections** of your consent
+* If you plan to share your data, consider adding clarifying language to several **sections** of your consent
 
 <br>
 
@@ -209,18 +209,19 @@ knitr::include_graphics("img/Qualtrics.png")
 
 These suggestions will **reduce future data management headaches**:
 
-1. Correctly name all of your survey items
+1\. Correctly name all of your survey items
   + Q1 = s_gender
-1. Correctly code all of your values
+2\. Correctly code all of your values
   + 1 = strongly disagree, 2 = disagree.......
-1. Use data validation
+3\. Use data validation
   + Content validation
      - Restricting birth date field to only a date
   + Response validation
      - Force response
      - Request response
-1. Use the same question format across and within studies
+4\. Use the same question format across and within studies
   + If *anxiety1* was a slider 1-10 in the fall, keep it as a slider 1-10 in the spring
+  
 ```{r fig.align="center", echo=FALSE, out.width='65%'}
 knitr::include_graphics("img/slider.png")
 ```
@@ -300,13 +301,13 @@ knitr::include_graphics("img/Feedback-meme.jpg")
 
 If your participants or sites do not have access to internet or WiFi, there are options.
 
-1. Utilize an offline survey app option (available in platforms such as Qualtrics)
+1\. Utilize an offline survey app option (available in platforms such as Qualtrics)
   + Create the survey online
   + Administer it using an offline survey app
   + The data saves in the app on your device
   + Then you can upload that data back to the online survey platform when you have a connection again
   
-1. Use TeleForm or Scantrons
+2\. Use TeleForm or Scantrons
   + Machine readable forms
 
 ---
@@ -409,13 +410,9 @@ Source: [Lucy D'Agostino McGowan](https://docs.google.com/presentation/d/1FtI4Ke
 
 # Security in the field
 
-* Researchers are always balancing two things: Participant confidentiality and accurate data
-
-* IRB requires that
-  + Participants do not know their study IDs
-  + No document should ever have both participant name and study ID on the same form
+* Researchers are always concerned with two things: Participant confidentiality and accurate data
   
-* However, if your study is longitudinal, maintaining accurate study IDs over time is crucial
+* If your study is longitudinal, maintaining accurate study IDs over time is crucial
 
 ```{r echo=FALSE, out.width='20%'}
 
@@ -436,7 +433,8 @@ gt::gt()
 
 Options when sending out web-based surveys/assessments:
 
-1. Send unique links to each participant, easily created using a panel
+1\. Send unique links to each participant, easily created using a panel
+
   * Pros:
       + Best way to ensure you have the correct study IDs
   * Cons:
@@ -445,12 +443,13 @@ Options when sending out web-based surveys/assessments:
       
 --
       
-2\. Send one link to all participants and use a double ID
+2\. Send one link to all participants and have them enter their study ID
+
   * Pros:
-    + Easy to make and send one link
+      + Easy to make and send one link  
   * Cons:
-    + Have to create and track a double ID
-    + Room for error with entering double ID
+      + Have to provide everyone with their study ID
+      + Room for error with entering ID
 
 
 For either of these options, on the first page of the survey, have them verify their identity based on the link they used and/or the ID they entered. This reduces errors!
@@ -463,7 +462,7 @@ For either of these options, on the first page of the survey, have them verify t
   * Pros:
       + Easy to make and send one link
   * Cons:
-      + Most problematic in terms of data management and linking to IDs
+      + Most problematic in terms of data management, privacy, and linking to IDs
   
 --
 
@@ -471,7 +470,7 @@ Other security precautions to take:
 
 * Instruct participants to close their browser at the completion of their survey
 * If you are collecting anonymous data, do not collect IP address
-* Make sure you using/building data collection and storage tools that are approved by your IT department and are considered secure for your data's level of sensitivity
+* Make sure you are using/building data collection and storage tools that are approved by your IT department and are considered secure for your data's level of sensitivity
 * For in-field data collection devices (tablets, phones, laptops):
   * Make them password secure
   * Never leave devices open and unattended
@@ -481,17 +480,17 @@ Other security precautions to take:
 
 # Offline data collection security
 
-If you take paper forms into the field and you need participant name, consider doing one of the following to link names to IDs at a later time:
+If you take paper forms into the field consider doing the following:
 
-1. Write the study/participant ID on the form, then use a reusable label with participant name and place that over the ID.
+1. Write the participant ID on the form, then use a reusable label with participant name and place that over the ID or attach a cover sheet with name and any other relevant identifiers.
+  + When you return to the office, remove the label or cover sheet, leaving only ID on the form
+  + This ensures that your data entry team only sees the ID
 
-1. Attach a cover sheet to each form that includes identifying information. Then when returning to the office remove the cover sheet and write the study ID on the form.
+1. If you need a roster of consented participants in the field with both name and study ID, you can do one of two things:
 
-1. If you need both the name and the ID in the field, consider using two separate forms (one with a double ID).
+  + Bring your tracking database into the field, on a secure device (such as a tablet) and refer to that database as needed
+  + Print a roster with name and study ID and keep those rosters secure in the field (not laying out on a table) and either shred them when you return to the office if you no longer need them or store them securely.
 
-```{r fig.align="center", echo=FALSE, out.width='60%'}
-knitr::include_graphics("img/twotables.png")
-```
 
 ---
 
@@ -500,8 +499,6 @@ knitr::include_graphics("img/twotables.png")
 Other precautions to take:
 
 * No matter what method you use to take names and/or IDs into the field, **always** double check your IDs when you get back to the office, before you remove the name, and before you enter the data.
-
-* **Always** shred paper with names and other identifiers on them
 
 * Make sure all paper forms are kept in a folder or even a secure lock box, **with you** at all times in the field
 
@@ -515,6 +512,7 @@ There are many pieces of information that need to be tracked for a research stud
 
 * Consents and assents
 * Participant information
+* Study IDs
 * Incentives/Payments
 * Data collection completion
 * Participant movement
@@ -540,10 +538,9 @@ knitr::include_graphics("img/time-is-money.png")
 
 # Tracking system
 
-Some people use other terms for this (such as roster).
+This system is vital for the following:
 
-Whatever you call it, this system is vital for the following:
-
+* Securing data de-identification
 * Ensure you collect all your data
 * Scheduling and project coordination
 * Understanding what occurred during data collection
@@ -625,87 +622,98 @@ gt::gt()
 
 No matter what tool you use to track, consider the following:
 
-* **Just track! Even if it is in the most simple excel table, just track!**
-* Create one table per entity (participants, sites, districts)
-* Only include participants who have consented
-* Make entry clear
-  * Split out first name and last name
-* Restrict entry values in your system
-  * Example only allow (yes/no), or a drop-down list of school names
-* Consider how you want to track data over time
-  * Do you want all time points in the same table or a different table for each time point?
-  * Do you want cohorts in separate tables or same table?
-* Use versioning
-  * You may need to go back to an older version of your tracking system if a mistake was made
-* Make sure your system easily allows you to export data
-  * Print rosters, print labels
-* Keep the tables consistent across time for continuity and ease of understanding
-  * Always label columns the same way, allow the same values
+**Just track! Even if it is in the most simple Excel table, just track!**
 
+1. You will set up a series of linking key tables
+  + One per entity (student key table, teacher key table, school key table)
+  + This is where you will enter all of your consented participant identifiable information
+    + Name, Email, DOB
+  
+2. You will set up a series of data collection tracking tables
+  + One per entity (student tracking, teacher tracking, school tracking)
+  + This is where you will track the data collected within and across time
+    - Survey in wave 1, observation in wave 1, survey in wave 2, observation in wave 2
+
+---
+
+# Fields to include in linking key tables
+
+  + Study ID/Location ID (Primary Key and Foreign Keys--will discuss this shortly)
+  + Participant/Site name
+  + Contact information
+  + Other IDs necessary for linking data (such as a state ID for linking to student school records)
+  + Relevant identifiable information (such as date of birth, email)
+  + Schedule information needed for the study (block, class time, grade level)
+  + Consent/Assent received
+  + Randomization info (cohort, group)
+  + Consent rate information (# of consents sent out, # of students in class)
+  + Payment information (ex: W9)
+  + Condition (treatment/control)
+  
 ---
 
 class: inverse
 
-# Fields to include: IDs
+# Study IDs
 
 In ANY table, always include a Participant ID and/or Location IDs
 
 What is an ID?
 
-* As you recruit participants/schools, you will add them to your roster/tracking database under an ID
+* As you recruit participants/schools, you will add them to your linking key tables under an ID
 
-* This ID allows participants to remain confidential in your research data
+* This ID allows participants/sites to remain confidential in your research data
 
 * The ID is typically a 2-6 random numeric or alphanumeric value
 
-* It must be **unique** to that individual
+* It must be **unique** to that individual/site
 
-* It follow that individual for the **entire** study. It **never** changes.
+* It follow that individual/site for the **entire** study. It **never** changes.
 
-```{r fig.align="center", echo=FALSE, out.width='60%'}
+```{r fig.align="center", echo=FALSE, out.width='65%'}
 knitr::include_graphics("img/IDtable.png")
 ```
 
+---
+
+# Fields to include in your tracking tables
+
+  + Data collected (for each unique piece of data)  
+      + Observation collected (yes/no)  
+      + Interview collected (yes/no)  
+      + Survey collected (yes/no)  
+  + Movement/Dropped (ex: track if a student moved out of the school during fall data collection)  
+  + Notes (ex: This is where you want to track ANYTHING you may need to remember at a later time such as reasons for missing data, errors in the data, etc.)  
+  + Payment/Incentives provided  
+  + Other optional pieces to collect:  
+      + Attempts to collect data  
+      + Communication with the participant  
+      + Dates data collection completed  
+      
+---
+
+# Creating your tracking tables
+
+  + Use a system that restricts entry values to reduce error (only allow yes/no for a field, or a drop-down list of school names)  
+  + Don't lump separate pieces of information in the same field (ex: separate first name and last name into two fields)
+  + Use some sort of versioning as you will be constantly updating and adding to your tracking system and there may be times when you need to check an older version  
+  + Use a system that allows querying of data (pull tables of information as needed such as rosters, or percent of surveys collected per classroom)  
+  + Use a system that easily allows export of data if you need to print rosters or print labels, etc.   
 
 ---
 
-# Fields to include cont.
-
-The following can be placed into a separate demographics/participant table (roster) OR kept in your data collection tracking:
-
-* Participant/Site Name
-* Contact Information/Emails
-* Other IDs necessary for linking (ex: student ID for school records)
-* Relevant study demographics
-* Schedule information needed for the study (block, class time)
-* Consent/Assent received
-* Randomization information (cohort, group)
-* Payment information (ex: W9)
-* Double IDs if you use these for data collection
-
-
----
-
-# Fields to include cont.
-
-If your study is longitudinal these are fields you will track over time (each wave of collection) and/or have in your data collection tables:
-
-* Data collected (each unique piece)
-  * Observation complete (yes/no)
-  * Interview complete (yes/no)
-* Payment/incentives provided
-* Participant movement
-* Notes
+# Example tables
 
 
 .pull-left[
 
-Student roster/demographics table
+Student key table
 ```{r echo=FALSE, out.width='20%'}
 
 tibble::tribble (~ stu_id, ~ stu_f_name, ~stu_l_name, ~tch_id, ~email, ~dob,
                  26389, "Johnny", "Rose", 263, "rosej@school.edu", "12/03/2006",
-                 26392, "Alexis", "Rose", 265, "rosea@school.edu", "11/15/2005") %>%
+                 26392, "Alexis", "Rose", 265, "rosea@school.edu", "11/15/2005",
+                 26395, "Moira", "Rose", 265, "rosem@school.edu", "12/12/2005") %>%
 gt::gt()
   
 ```
@@ -719,7 +727,8 @@ Student data collection table
 
 tibble::tribble (~ stu_id, ~ tch_id, ~t1_svy, ~t2_svy, ~t1_incent, ~t2_incent,~moved,~notes,
                  26389, 263, "yes", "no", "yes", "no", "yes", "left district 02/10/2021",
-                 26392, 265, "yes", "yes", "yes", "yes", "no", "") %>%
+                 26392, 265, "yes", "yes", "yes", "yes", "no", "",
+                 26395, 265, "yes", "no", "yes", "no", "no", "OSS during data collection") %>%
 gt::gt()
   
 ```
@@ -797,7 +806,6 @@ General rules:
 * Limit access to this database
 * Store this on a password-protected, institution sponsored shared network or approved cloud service with encryption
 * Back this data up regularly
-* Make a plan to destroy this data after study completion
 
 ```{r fig.align="center", echo=FALSE, out.width='30%'}
 knitr::include_graphics("img/confidential.png")
@@ -853,7 +861,6 @@ This data is especially sensitive as it may contain names and faces as part of t
 * Conduct the call in secure/private location
 * If recording the session, notify participants that they are being recorded
 * Store sessions on an institution approved cloud service or managed service
-* Once transcripts are created, make a plan to destroy the recordings
 
 These same rules apply to data that is recorded in person.
 
