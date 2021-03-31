@@ -49,7 +49,7 @@ knitr::include_graphics("img/collect-all-the-data.jpg")
 
 --
 
-* Creating a Tracking Database
+* Creating a Participant Database
 
 --
 
@@ -506,7 +506,7 @@ Other precautions to take:
 
 ---
 
-# Tracking
+# Participant Database
 
 There are many pieces of information that need to be tracked for a research study.
 
@@ -536,7 +536,7 @@ knitr::include_graphics("img/time-is-money.png")
 
 ---
 
-# Tracking system
+# Participant database cont.
 
 This system is vital for the following:
 
@@ -555,14 +555,14 @@ Project coordinators and data managers must work together when setting up this t
 
 ---
 
-# Building a tracking database
+# Building a participant database
 
-You can build this tracking database in any software you choose such as:
+You can build this database in any software you choose such as:
 
 * Microsoft Access
 * Microsoft Excel
-* Web-based platform such as QuickBase, Salesforce, or RedCap
-* A survey platftorm such as Qualtrics
+* Web-based platform such as QuickBase or RedCap
+* Google Sheets/Google Forms
 * Forms that feed into a relational database
 
 My recommendation: *A relational database system that allows you to pull tables together using a query system*. 
@@ -570,6 +570,7 @@ My recommendation: *A relational database system that allows you to pull tables 
 * Eliminates redundant data
 * Increases performance
 * Decreases storage
+* Reduces error
 * Makes it much easier to update tables as changes occur
 
 Resource: [Microsoft](https://support.microsoft.com/en-us/office/database-design-basics-eb2159cf-1e30-401a-8084-bd4f9c9ca1f5)
@@ -578,7 +579,7 @@ Resource: [Microsoft](https://support.microsoft.com/en-us/office/database-design
 
 class: inverse
 
-# Building a tracking database
+# Building a participant database
 
 Relational database
 
@@ -601,7 +602,6 @@ Even though our student table does not have teacher name in it, we can now use a
 This query:  
 `SELECT Student.stu_f_name, Student.stu_1_name, Teacher.tch_f_name, Teacher.tch_l_name,`   `Teacher.grade_level`  
 `FROM Student INNER JOIN Teacher ON Student.tch_id = Teacher.tch_id`  
-`WHERE consent_complete='Yes'`  
 `ORDER BY tch_l_name, tch_f_name`
 
 Would produce a roster like this:
@@ -610,6 +610,7 @@ Would produce a roster like this:
 tibble::tribble (~ stu_f_name, ~ stu_l_name, ~tch_f_name, ~tch_l_name, ~grade_level,
                  "Johnny", "Rose", "Stevie", "Budd", 3,
                  "Alexis", "Rose", "Stevie", "Budd", 3,
+                 "Jocelyn", "Schitt", "Stevie", "Budd", 3,
                  "Patrick", "Brewer", "Twyla", "Sands", 4,
                  "Ray", "Butani", "Twyla", "Sands", 4) %>%
 gt::gt()
@@ -618,25 +619,21 @@ gt::gt()
 
 ---
 
-# Setting up your tracking database
+# Setting up your participant database
 
-No matter what tool you use to track, consider the following:
+No matter what tool you use to track participant information, consider the following:
 
-**Just track! Even if it is in the most simple Excel table, just track!**
+**Just track! Even if it is in the most simple Excel spreadsheet, just track!**
 
-1. You will set up a series of linking key tables
-  + One per entity (student key table, teacher key table, school key table)
-  + This is where you will enter all of your consented participant identifiable information
-    + Name, Email, DOB
-  
-2. You will set up a series of data collection tracking tables
-  + One per entity (student tracking, teacher tracking, school tracking)
-  + This is where you will track the data collected within and across time
-    - Survey in wave 1, observation in wave 1, survey in wave 2, observation in wave 2
+At the most basic level, create one table per entity (ex: student table, teacher table, school table) and include all relevant fields
+
+```{r fig.align="center", echo=FALSE, out.width='60%'}
+knitr::include_graphics("img/tables-new.png")
+```
 
 ---
 
-# Fields to include in linking key tables
+# Fields to include early on
 
   + Study ID/Location ID (Primary Key and Foreign Keys--will discuss this shortly)
   + Participant/Site name
@@ -649,6 +646,7 @@ No matter what tool you use to track, consider the following:
   + Consent rate information (# of consents sent out, # of students in class)
   + Payment information (ex: W9)
   + Condition (treatment/control)
+  + Movement/Dropped (ex: track if a student moved out of the school during fall data collection) 
   
 ---
 
@@ -660,7 +658,7 @@ In ANY table, always include a Participant ID and/or Location IDs
 
 What is an ID?
 
-* As you recruit participants/schools, you will add them to your linking key tables under an ID
+* As you recruit participants/schools, you will add them to your participant database under an ID
 
 * This ID allows participants/sites to remain confidential in your research data
 
@@ -676,15 +674,16 @@ knitr::include_graphics("img/IDtable.png")
 
 ---
 
-# Fields to include in your tracking tables
+# Fields to track over time
+
+These fields will exist for every wave of data collecion.
 
   + Data collected (for each unique piece of data)  
-      + Observation collected (yes/no)  
-      + Interview collected (yes/no)  
-      + Survey collected (yes/no)  
-  + Movement/Dropped (ex: track if a student moved out of the school during fall data collection)  
+      + Observation collected (complete/incomplete)  
+      + Interview collected (complete/incomplete)  
+      + Survey collected (complete/incomplete)  
   + Notes (ex: This is where you want to track ANYTHING you may need to remember at a later time such as reasons for missing data, errors in the data, etc.)  
-  + Payment/Incentives provided  
+  + Payment/incentives provided  
   + Other optional pieces to collect:  
       + Attempts to collect data  
       + Communication with the participant  
@@ -692,47 +691,16 @@ knitr::include_graphics("img/IDtable.png")
       
 ---
 
-# Creating your tracking tables
+# Setting up your tables
 
   + Use a system that restricts entry values to reduce error (only allow yes/no for a field, or a drop-down list of school names)  
   + Don't lump separate pieces of information in the same field (ex: separate first name and last name into two fields)
+  + Follow variable naming best practices (no spaces between words, no special characters)
+  
+Also,
   + Use some sort of versioning as you will be constantly updating and adding to your tracking system and there may be times when you need to check an older version  
-  + Use a system that allows querying of data (pull tables of information as needed such as rosters, or percent of surveys collected per classroom)  
+  + Use a system that allows querying/filtering of data (pull tables of information as needed such as rosters or percent of surveys collected per classroom, filter table to only see students who have not dropped)  
   + Use a system that easily allows export of data if you need to print rosters or print labels, etc.   
-
----
-
-# Example tables
-
-
-.pull-left[
-
-Student key table
-```{r echo=FALSE, out.width='20%'}
-
-tibble::tribble (~ stu_id, ~ stu_f_name, ~stu_l_name, ~tch_id, ~email, ~dob,
-                 26389, "Johnny", "Rose", 263, "rosej@school.edu", "12/03/2006",
-                 26392, "Alexis", "Rose", 265, "rosea@school.edu", "11/15/2005",
-                 26395, "Moira", "Rose", 265, "rosem@school.edu", "12/12/2005") %>%
-gt::gt()
-  
-```
-
-]
-
-.pull-right[
-
-Student data collection table
-```{r echo=FALSE, out.width='20%'}
-
-tibble::tribble (~ stu_id, ~ tch_id, ~t1_svy, ~t2_svy, ~t1_incent, ~t2_incent,~moved,~notes,
-                 26389, 263, "yes", "no", "yes", "no", "yes", "left district 02/10/2021",
-                 26392, 265, "yes", "yes", "yes", "yes", "no", "",
-                 26395, 265, "yes", "no", "yes", "no", "no", "OSS during data collection") %>%
-gt::gt()
-  
-```
-]
 
 ---
 
@@ -796,7 +764,7 @@ Source: [LDbase.org](https://venngage.net/ps/5p6yjaAGTSs/new-5-things-to-check-f
 
 ---
 
-# Storing a tracking database
+# Storing a participant database
 
 This data has identifiable information and must have the highest security.
 
