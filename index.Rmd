@@ -3,7 +3,7 @@ title: "Data Management in Large-Scale <br> Education Research"
 subtitle: "<br> Data Collection Structures"
 author: "Crystal Lewis"
 institute: "Missouri Prevention Science Institute"
-date: "02/12/2020 (updated: `r format(Sys.time(), '%m/%d/%Y')`)" 
+date: "02/12/2021 (updated: `r format(Sys.time(), '%m/%d/%Y')`)" 
 output:
   xaringan::moon_reader:
     css: [default, metropolis]
