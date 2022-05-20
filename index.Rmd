@@ -191,7 +191,7 @@ If at all possible, use a web-based survey.
 
 Options:
 
-  * Use an existing survey platform (Qualtrics, SurveyMonkey, Google Forms)
+  * Use an existing survey platform (Qualtrics, SurveyMonkey, Google Forms, KoBo Toolbox, ODK, SurveyCTO)
   * You can hire a developer to build an app for you
   * You can build your own application to collect data in tools such as R or Tableau
   
@@ -205,30 +205,32 @@ knitr::include_graphics("img/Qualtrics.png")
 
 ---
 
-# Web-based surveys cont.
+# Web-based surveys 
 
-These suggestions will **reduce future data management headaches**:
+These suggestions will **reduce future data management headaches**
 
-1\. Correctly name all of your survey items
-  + Q1 = s_gender
-2\. Correctly code all of your values
-  + 1 = strongly disagree, 2 = disagree.......
-3\. Use data validation
-  + Content validation
-     - Restricting birth date field to only a date
-  + Response validation
-     - Force response
-     - Request response
-4\. Use the same question format across and within studies
-  + If *anxiety1* was a slider 1-10 in the fall, keep it as a slider 1-10 in the spring
+1\. Correctly name all of your survey items  
+  + Q1 = s_gender   
+
+2\. Correctly code all of your values  
+  + `1 = strongly disagree, 2 = disagree, 3 = agree, 4 = strongly agree`
   
-```{r fig.align="center", echo=FALSE, out.width='65%'}
-knitr::include_graphics("img/slider.png")
-```
-
+3\. Use data validation  
+  + Content validation  
+      - Restricting birth date field to only a date  
+  + Response validation  
+      - Force response/Request response 
+      
 ---
 
 # Web-based surveys cont.
+
+4\. Use the same question format across and within studies
+  + If *anxiety1* was a slider 1-10 in the fall, keep it as a slider 1-10 in the spring  
+  
+```{r fig.align="center", echo=FALSE, out.width='55%'}
+knitr::include_graphics("img/slider.png")
+```
 
 5\. Only ask one piece of information per question
   + Don't ask: Provide the % proficient in math and comm arts
@@ -240,15 +242,16 @@ knitr::include_graphics("img/slider.png")
   + Don't ask: Are you from this county?
   + Do ask: Do you currently live in this county?
   
-7\. Make your response options abundantly clear.
-  + Don't ask: Which parent are you? (m/f)
-  + Do ask: Which parent are you? (mother/father/legal guardian/other)
-  
 ---
 
 # Web-based surveys cont.
 
 .pull-left[
+
+7\. Make your response options abundantly clear.
+  + Don't ask: Which parent are you? (m/f)
+  + Do ask: Which parent are you? (mother/father/legal guardian/other)
+  
 8\. If there is a finite number of response options (< ~ 20), use a drop down.
   + School Name: South Middle, North Middle, West Middle, East Middle
 

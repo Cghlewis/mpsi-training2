@@ -4,6 +4,7 @@
     <title>Data Management in Large-Scale   Education Research</title>
     <meta charset="utf-8" />
     <meta name="author" content="Crystal Lewis" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
     <link href="libs/remark-css/default.css" rel="stylesheet" />
     <link href="libs/remark-css/metropolis.css" rel="stylesheet" />
   </head>
@@ -11,11 +12,21 @@
     <textarea id="source">
 class: center, middle, inverse, title-slide
 
+.title[
 # Data Management in Large-Scale <br> Education Research
+]
+.subtitle[
 ## <br> Data Collection Structures
+]
+.author[
 ### Crystal Lewis
+]
+.institute[
 ### Missouri Prevention Science Institute
-### 02/12/2021 (updated: 04/12/2021)
+]
+.date[
+### 02/12/2021 (updated: 05/20/2022)
+]
 
 ---
 
@@ -28,7 +39,7 @@ class: center, middle, inverse, title-slide
 
 --
 
-&lt;img src="img/collect-all-the-data.jpg" width="529" style="display: block; margin: auto;" /&gt;
+&lt;img src="img/collect-all-the-data.jpg" style="display: block; margin: auto;" /&gt;
 
 ---
 
@@ -186,7 +197,7 @@ If at all possible, use a web-based survey.
 
 Options:
 
-  * Use an existing survey platform (Qualtrics, SurveyMonkey, Google Forms)
+  * Use an existing survey platform (Qualtrics, SurveyMonkey, Google Forms, KoBo Toolbox, ODK, SurveyCTO)
   * You can hire a developer to build an app for you
   * You can build your own application to collect data in tools such as R or Tableau
   
@@ -198,28 +209,30 @@ Take time to consider how the data you collect will be *translated into a databa
 
 ---
 
-# Web-based surveys cont.
+# Web-based surveys 
 
-These suggestions will **reduce future data management headaches**:
+These suggestions will **reduce future data management headaches**
 
-1\. Correctly name all of your survey items
-  + Q1 = s_gender
-2\. Correctly code all of your values
-  + 1 = strongly disagree, 2 = disagree.......
-3\. Use data validation
-  + Content validation
-     - Restricting birth date field to only a date
-  + Response validation
-     - Force response
-     - Request response
-4\. Use the same question format across and within studies
-  + If *anxiety1* was a slider 1-10 in the fall, keep it as a slider 1-10 in the spring
+1\. Correctly name all of your survey items  
+  + Q1 = s_gender   
+
+2\. Correctly code all of your values  
+  + `1 = strongly disagree, 2 = disagree, 3 = agree, 4 = strongly agree`
   
-&lt;img src="img/slider.png" width="65%" style="display: block; margin: auto;" /&gt;
-
+3\. Use data validation  
+  + Content validation  
+      - Restricting birth date field to only a date  
+  + Response validation  
+      - Force response/Request response 
+      
 ---
 
 # Web-based surveys cont.
+
+4\. Use the same question format across and within studies
+  + If *anxiety1* was a slider 1-10 in the fall, keep it as a slider 1-10 in the spring  
+  
+&lt;img src="img/slider.png" width="55%" style="display: block; margin: auto;" /&gt;
 
 5\. Only ask one piece of information per question
   + Don't ask: Provide the % proficient in math and comm arts
@@ -231,15 +244,16 @@ These suggestions will **reduce future data management headaches**:
   + Don't ask: Are you from this county?
   + Do ask: Do you currently live in this county?
   
-7\. Make your response options abundantly clear.
-  + Don't ask: Which parent are you? (m/f)
-  + Do ask: Which parent are you? (mother/father/legal guardian/other)
-  
 ---
 
 # Web-based surveys cont.
 
 .pull-left[
+
+7\. Make your response options abundantly clear.
+  + Don't ask: Which parent are you? (m/f)
+  + Do ask: Which parent are you? (mother/father/legal guardian/other)
+  
 8\. If there is a finite number of response options (&lt; ~ 20), use a drop down.
   + School Name: South Middle, North Middle, West Middle, East Middle
 
@@ -397,11 +411,12 @@ Source: [Lucy D'Agostino McGowan](https://docs.google.com/presentation/d/1FtI4Ke
   
 * If your study is longitudinal, maintaining accurate study IDs over time is crucial
 
+<div id="iafgcenuni" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#uxweufagym .gt_table {
+#iafgcenuni .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -426,7 +441,7 @@ Source: [Lucy D'Agostino McGowan](https://docs.google.com/presentation/d/1FtI4Ke
   border-left-color: #D3D3D3;
 }
 
-#uxweufagym .gt_heading {
+#iafgcenuni .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -438,33 +453,37 @@ Source: [Lucy D'Agostino McGowan](https://docs.google.com/presentation/d/1FtI4Ke
   border-right-color: #D3D3D3;
 }
 
-#uxweufagym .gt_title {
+#iafgcenuni .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
   padding-top: 4px;
   padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
   border-bottom-color: #FFFFFF;
   border-bottom-width: 0;
 }
 
-#uxweufagym .gt_subtitle {
+#iafgcenuni .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
   padding-top: 0;
-  padding-bottom: 4px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
   border-top-color: #FFFFFF;
   border-top-width: 0;
 }
 
-#uxweufagym .gt_bottom_border {
+#iafgcenuni .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#uxweufagym .gt_col_headings {
+#iafgcenuni .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -479,7 +498,7 @@ Source: [Lucy D'Agostino McGowan](https://docs.google.com/presentation/d/1FtI4Ke
   border-right-color: #D3D3D3;
 }
 
-#uxweufagym .gt_col_heading {
+#iafgcenuni .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -499,7 +518,7 @@ Source: [Lucy D'Agostino McGowan](https://docs.google.com/presentation/d/1FtI4Ke
   overflow-x: hidden;
 }
 
-#uxweufagym .gt_column_spanner_outer {
+#iafgcenuni .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -511,28 +530,31 @@ Source: [Lucy D'Agostino McGowan](https://docs.google.com/presentation/d/1FtI4Ke
   padding-right: 4px;
 }
 
-#uxweufagym .gt_column_spanner_outer:first-child {
+#iafgcenuni .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#uxweufagym .gt_column_spanner_outer:last-child {
+#iafgcenuni .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#uxweufagym .gt_column_spanner {
+#iafgcenuni .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
   vertical-align: bottom;
   padding-top: 5px;
-  padding-bottom: 6px;
+  padding-bottom: 5px;
   overflow-x: hidden;
   display: inline-block;
   width: 100%;
 }
 
-#uxweufagym .gt_group_heading {
-  padding: 8px;
+#iafgcenuni .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -553,7 +575,7 @@ Source: [Lucy D'Agostino McGowan](https://docs.google.com/presentation/d/1FtI4Ke
   vertical-align: middle;
 }
 
-#uxweufagym .gt_empty_group_heading {
+#iafgcenuni .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -568,15 +590,15 @@ Source: [Lucy D'Agostino McGowan](https://docs.google.com/presentation/d/1FtI4Ke
   vertical-align: middle;
 }
 
-#uxweufagym .gt_from_md > :first-child {
+#iafgcenuni .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#uxweufagym .gt_from_md > :last-child {
+#iafgcenuni .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#uxweufagym .gt_row {
+#iafgcenuni .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -595,7 +617,7 @@ Source: [Lucy D'Agostino McGowan](https://docs.google.com/presentation/d/1FtI4Ke
   overflow-x: hidden;
 }
 
-#uxweufagym .gt_stub {
+#iafgcenuni .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -604,10 +626,29 @@ Source: [Lucy D'Agostino McGowan](https://docs.google.com/presentation/d/1FtI4Ke
   border-right-style: solid;
   border-right-width: 2px;
   border-right-color: #D3D3D3;
-  padding-left: 12px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
-#uxweufagym .gt_summary_row {
+#iafgcenuni .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#iafgcenuni .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#iafgcenuni .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -617,17 +658,26 @@ Source: [Lucy D'Agostino McGowan](https://docs.google.com/presentation/d/1FtI4Ke
   padding-right: 5px;
 }
 
-#uxweufagym .gt_first_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
+#iafgcenuni .gt_first_summary_row {
   border-top-style: solid;
-  border-top-width: 2px;
   border-top-color: #D3D3D3;
 }
 
-#uxweufagym .gt_grand_summary_row {
+#iafgcenuni .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#iafgcenuni .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#iafgcenuni .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -637,7 +687,7 @@ Source: [Lucy D'Agostino McGowan](https://docs.google.com/presentation/d/1FtI4Ke
   padding-right: 5px;
 }
 
-#uxweufagym .gt_first_grand_summary_row {
+#iafgcenuni .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -647,11 +697,11 @@ Source: [Lucy D'Agostino McGowan](https://docs.google.com/presentation/d/1FtI4Ke
   border-top-color: #D3D3D3;
 }
 
-#uxweufagym .gt_striped {
+#iafgcenuni .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#uxweufagym .gt_table_body {
+#iafgcenuni .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -660,7 +710,7 @@ Source: [Lucy D'Agostino McGowan](https://docs.google.com/presentation/d/1FtI4Ke
   border-bottom-color: #D3D3D3;
 }
 
-#uxweufagym .gt_footnotes {
+#iafgcenuni .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -674,13 +724,16 @@ Source: [Lucy D'Agostino McGowan](https://docs.google.com/presentation/d/1FtI4Ke
   border-right-color: #D3D3D3;
 }
 
-#uxweufagym .gt_footnote {
+#iafgcenuni .gt_footnote {
   margin: 0px;
   font-size: 90%;
-  padding: 4px;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
-#uxweufagym .gt_sourcenotes {
+#iafgcenuni .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -694,46 +747,83 @@ Source: [Lucy D'Agostino McGowan](https://docs.google.com/presentation/d/1FtI4Ke
   border-right-color: #D3D3D3;
 }
 
-#uxweufagym .gt_sourcenote {
+#iafgcenuni .gt_sourcenote {
   font-size: 90%;
-  padding: 4px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
-#uxweufagym .gt_left {
+#iafgcenuni .gt_left {
   text-align: left;
 }
 
-#uxweufagym .gt_center {
+#iafgcenuni .gt_center {
   text-align: center;
 }
 
-#uxweufagym .gt_right {
+#iafgcenuni .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#uxweufagym .gt_font_normal {
+#iafgcenuni .gt_font_normal {
   font-weight: normal;
 }
 
-#uxweufagym .gt_font_bold {
+#iafgcenuni .gt_font_bold {
   font-weight: bold;
 }
 
-#uxweufagym .gt_font_italic {
+#iafgcenuni .gt_font_italic {
   font-style: italic;
 }
 
-#uxweufagym .gt_super {
+#iafgcenuni .gt_super {
   font-size: 65%;
 }
 
-#uxweufagym .gt_footnote_marks {
+#iafgcenuni .gt_two_val_uncert {
+  display: inline-block;
+  line-height: 1em;
+  text-align: right;
+  font-size: 60%;
+  vertical-align: -0.25em;
+  margin-left: 0.1em;
+}
+
+#iafgcenuni .gt_footnote_marks {
   font-style: italic;
-  font-size: 65%;
+  font-weight: normal;
+  font-size: 75%;
+  vertical-align: 0.4em;
+}
+
+#iafgcenuni .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#iafgcenuni .gt_slash_mark {
+  font-size: 0.7em;
+  line-height: 0.7em;
+  vertical-align: 0.15em;
+}
+
+#iafgcenuni .gt_fraction_numerator {
+  font-size: 0.6em;
+  line-height: 0.6em;
+  vertical-align: 0.45em;
+}
+
+#iafgcenuni .gt_fraction_denominator {
+  font-size: 0.6em;
+  line-height: 0.6em;
+  vertical-align: -0.05em;
 }
 </style>
-<div id="uxweufagym" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
+<table class="gt_table">
   
   <thead class="gt_col_headings">
     <tr>
@@ -745,38 +835,31 @@ Source: [Lucy D'Agostino McGowan](https://docs.google.com/presentation/d/1FtI4Ke
     </tr>
   </thead>
   <tbody class="gt_table_body">
-    <tr>
-      <td class="gt_row gt_right">1268</td>
-      <td class="gt_row gt_right">5</td>
-      <td class="gt_row gt_right">4</td>
-      <td class="gt_row gt_right">NA</td>
-      <td class="gt_row gt_right">3</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_right">1286</td>
-      <td class="gt_row gt_right">NA</td>
-      <td class="gt_row gt_right">NA</td>
-      <td class="gt_row gt_right">3</td>
-      <td class="gt_row gt_right">NA</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_right">1306</td>
-      <td class="gt_row gt_right">2</td>
-      <td class="gt_row gt_right">3</td>
-      <td class="gt_row gt_right">5</td>
-      <td class="gt_row gt_right">1</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_right">1245</td>
-      <td class="gt_row gt_right">5</td>
-      <td class="gt_row gt_right">4</td>
-      <td class="gt_row gt_right">3</td>
-      <td class="gt_row gt_right">4</td>
-    </tr>
+    <tr><td class="gt_row gt_right">1268</td>
+<td class="gt_row gt_right">5</td>
+<td class="gt_row gt_right">4</td>
+<td class="gt_row gt_right">NA</td>
+<td class="gt_row gt_right">3</td></tr>
+    <tr><td class="gt_row gt_right">1286</td>
+<td class="gt_row gt_right">NA</td>
+<td class="gt_row gt_right">NA</td>
+<td class="gt_row gt_right">3</td>
+<td class="gt_row gt_right">NA</td></tr>
+    <tr><td class="gt_row gt_right">1306</td>
+<td class="gt_row gt_right">2</td>
+<td class="gt_row gt_right">3</td>
+<td class="gt_row gt_right">5</td>
+<td class="gt_row gt_right">1</td></tr>
+    <tr><td class="gt_row gt_right">1245</td>
+<td class="gt_row gt_right">5</td>
+<td class="gt_row gt_right">4</td>
+<td class="gt_row gt_right">3</td>
+<td class="gt_row gt_right">4</td></tr>
   </tbody>
   
   
-</table></div>
+</table>
+</div>
 
 * Is 1286 a real ID? Or did 1268 get transposed/entered incorrectly?
 
@@ -952,11 +1035,12 @@ This query:
 `ORDER BY tch_l_name, tch_f_name`
 
 Would produce a roster like this:
+<div id="dhrxsuirav" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#bjijsckzjf .gt_table {
+#dhrxsuirav .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -981,7 +1065,7 @@ Would produce a roster like this:
   border-left-color: #D3D3D3;
 }
 
-#bjijsckzjf .gt_heading {
+#dhrxsuirav .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -993,33 +1077,37 @@ Would produce a roster like this:
   border-right-color: #D3D3D3;
 }
 
-#bjijsckzjf .gt_title {
+#dhrxsuirav .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
   padding-top: 4px;
   padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
   border-bottom-color: #FFFFFF;
   border-bottom-width: 0;
 }
 
-#bjijsckzjf .gt_subtitle {
+#dhrxsuirav .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
   padding-top: 0;
-  padding-bottom: 4px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
   border-top-color: #FFFFFF;
   border-top-width: 0;
 }
 
-#bjijsckzjf .gt_bottom_border {
+#dhrxsuirav .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#bjijsckzjf .gt_col_headings {
+#dhrxsuirav .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1034,7 +1122,7 @@ Would produce a roster like this:
   border-right-color: #D3D3D3;
 }
 
-#bjijsckzjf .gt_col_heading {
+#dhrxsuirav .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1054,7 +1142,7 @@ Would produce a roster like this:
   overflow-x: hidden;
 }
 
-#bjijsckzjf .gt_column_spanner_outer {
+#dhrxsuirav .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1066,28 +1154,31 @@ Would produce a roster like this:
   padding-right: 4px;
 }
 
-#bjijsckzjf .gt_column_spanner_outer:first-child {
+#dhrxsuirav .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#bjijsckzjf .gt_column_spanner_outer:last-child {
+#dhrxsuirav .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#bjijsckzjf .gt_column_spanner {
+#dhrxsuirav .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
   vertical-align: bottom;
   padding-top: 5px;
-  padding-bottom: 6px;
+  padding-bottom: 5px;
   overflow-x: hidden;
   display: inline-block;
   width: 100%;
 }
 
-#bjijsckzjf .gt_group_heading {
-  padding: 8px;
+#dhrxsuirav .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1108,7 +1199,7 @@ Would produce a roster like this:
   vertical-align: middle;
 }
 
-#bjijsckzjf .gt_empty_group_heading {
+#dhrxsuirav .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1123,15 +1214,15 @@ Would produce a roster like this:
   vertical-align: middle;
 }
 
-#bjijsckzjf .gt_from_md > :first-child {
+#dhrxsuirav .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#bjijsckzjf .gt_from_md > :last-child {
+#dhrxsuirav .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#bjijsckzjf .gt_row {
+#dhrxsuirav .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1150,7 +1241,7 @@ Would produce a roster like this:
   overflow-x: hidden;
 }
 
-#bjijsckzjf .gt_stub {
+#dhrxsuirav .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1159,10 +1250,29 @@ Would produce a roster like this:
   border-right-style: solid;
   border-right-width: 2px;
   border-right-color: #D3D3D3;
-  padding-left: 12px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
-#bjijsckzjf .gt_summary_row {
+#dhrxsuirav .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#dhrxsuirav .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#dhrxsuirav .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1172,17 +1282,26 @@ Would produce a roster like this:
   padding-right: 5px;
 }
 
-#bjijsckzjf .gt_first_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
+#dhrxsuirav .gt_first_summary_row {
   border-top-style: solid;
-  border-top-width: 2px;
   border-top-color: #D3D3D3;
 }
 
-#bjijsckzjf .gt_grand_summary_row {
+#dhrxsuirav .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#dhrxsuirav .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#dhrxsuirav .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1192,7 +1311,7 @@ Would produce a roster like this:
   padding-right: 5px;
 }
 
-#bjijsckzjf .gt_first_grand_summary_row {
+#dhrxsuirav .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1202,11 +1321,11 @@ Would produce a roster like this:
   border-top-color: #D3D3D3;
 }
 
-#bjijsckzjf .gt_striped {
+#dhrxsuirav .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#bjijsckzjf .gt_table_body {
+#dhrxsuirav .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1215,7 +1334,7 @@ Would produce a roster like this:
   border-bottom-color: #D3D3D3;
 }
 
-#bjijsckzjf .gt_footnotes {
+#dhrxsuirav .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1229,13 +1348,16 @@ Would produce a roster like this:
   border-right-color: #D3D3D3;
 }
 
-#bjijsckzjf .gt_footnote {
+#dhrxsuirav .gt_footnote {
   margin: 0px;
   font-size: 90%;
-  padding: 4px;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
-#bjijsckzjf .gt_sourcenotes {
+#dhrxsuirav .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1249,46 +1371,83 @@ Would produce a roster like this:
   border-right-color: #D3D3D3;
 }
 
-#bjijsckzjf .gt_sourcenote {
+#dhrxsuirav .gt_sourcenote {
   font-size: 90%;
-  padding: 4px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
-#bjijsckzjf .gt_left {
+#dhrxsuirav .gt_left {
   text-align: left;
 }
 
-#bjijsckzjf .gt_center {
+#dhrxsuirav .gt_center {
   text-align: center;
 }
 
-#bjijsckzjf .gt_right {
+#dhrxsuirav .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#bjijsckzjf .gt_font_normal {
+#dhrxsuirav .gt_font_normal {
   font-weight: normal;
 }
 
-#bjijsckzjf .gt_font_bold {
+#dhrxsuirav .gt_font_bold {
   font-weight: bold;
 }
 
-#bjijsckzjf .gt_font_italic {
+#dhrxsuirav .gt_font_italic {
   font-style: italic;
 }
 
-#bjijsckzjf .gt_super {
+#dhrxsuirav .gt_super {
   font-size: 65%;
 }
 
-#bjijsckzjf .gt_footnote_marks {
+#dhrxsuirav .gt_two_val_uncert {
+  display: inline-block;
+  line-height: 1em;
+  text-align: right;
+  font-size: 60%;
+  vertical-align: -0.25em;
+  margin-left: 0.1em;
+}
+
+#dhrxsuirav .gt_footnote_marks {
   font-style: italic;
-  font-size: 65%;
+  font-weight: normal;
+  font-size: 75%;
+  vertical-align: 0.4em;
+}
+
+#dhrxsuirav .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#dhrxsuirav .gt_slash_mark {
+  font-size: 0.7em;
+  line-height: 0.7em;
+  vertical-align: 0.15em;
+}
+
+#dhrxsuirav .gt_fraction_numerator {
+  font-size: 0.6em;
+  line-height: 0.6em;
+  vertical-align: 0.45em;
+}
+
+#dhrxsuirav .gt_fraction_denominator {
+  font-size: 0.6em;
+  line-height: 0.6em;
+  vertical-align: -0.05em;
 }
 </style>
-<div id="bjijsckzjf" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
+<table class="gt_table">
   
   <thead class="gt_col_headings">
     <tr>
@@ -1300,45 +1459,36 @@ Would produce a roster like this:
     </tr>
   </thead>
   <tbody class="gt_table_body">
-    <tr>
-      <td class="gt_row gt_left">Johnny</td>
-      <td class="gt_row gt_left">Rose</td>
-      <td class="gt_row gt_left">Stevie</td>
-      <td class="gt_row gt_left">Budd</td>
-      <td class="gt_row gt_right">3</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">Alexis</td>
-      <td class="gt_row gt_left">Rose</td>
-      <td class="gt_row gt_left">Stevie</td>
-      <td class="gt_row gt_left">Budd</td>
-      <td class="gt_row gt_right">3</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">Jocelyn</td>
-      <td class="gt_row gt_left">Schitt</td>
-      <td class="gt_row gt_left">Stevie</td>
-      <td class="gt_row gt_left">Budd</td>
-      <td class="gt_row gt_right">3</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">Patrick</td>
-      <td class="gt_row gt_left">Brewer</td>
-      <td class="gt_row gt_left">Twyla</td>
-      <td class="gt_row gt_left">Sands</td>
-      <td class="gt_row gt_right">4</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">Ray</td>
-      <td class="gt_row gt_left">Butani</td>
-      <td class="gt_row gt_left">Twyla</td>
-      <td class="gt_row gt_left">Sands</td>
-      <td class="gt_row gt_right">4</td>
-    </tr>
+    <tr><td class="gt_row gt_left">Johnny</td>
+<td class="gt_row gt_left">Rose</td>
+<td class="gt_row gt_left">Stevie</td>
+<td class="gt_row gt_left">Budd</td>
+<td class="gt_row gt_right">3</td></tr>
+    <tr><td class="gt_row gt_left">Alexis</td>
+<td class="gt_row gt_left">Rose</td>
+<td class="gt_row gt_left">Stevie</td>
+<td class="gt_row gt_left">Budd</td>
+<td class="gt_row gt_right">3</td></tr>
+    <tr><td class="gt_row gt_left">Jocelyn</td>
+<td class="gt_row gt_left">Schitt</td>
+<td class="gt_row gt_left">Stevie</td>
+<td class="gt_row gt_left">Budd</td>
+<td class="gt_row gt_right">3</td></tr>
+    <tr><td class="gt_row gt_left">Patrick</td>
+<td class="gt_row gt_left">Brewer</td>
+<td class="gt_row gt_left">Twyla</td>
+<td class="gt_row gt_left">Sands</td>
+<td class="gt_row gt_right">4</td></tr>
+    <tr><td class="gt_row gt_left">Ray</td>
+<td class="gt_row gt_left">Butani</td>
+<td class="gt_row gt_left">Twyla</td>
+<td class="gt_row gt_left">Sands</td>
+<td class="gt_row gt_right">4</td></tr>
   </tbody>
   
   
-</table></div>
+</table>
+</div>
 
 ---
 
@@ -1732,6 +1882,19 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
     deleted = true;
   });
 })();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
 (function() {
   "use strict"
   // Replace <script> tags in slides area to make them executable
