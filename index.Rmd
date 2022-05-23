@@ -638,11 +638,11 @@ knitr::include_graphics("img/tables-new.png")
 
 # Fields to include early on
 
-  + Study ID/Location ID (Primary Key and Foreign Keys--will discuss this shortly)
+  + Study ID/Location ID (Primary Key and Foreign Keys)
   + Participant/Site name
   + Contact information
   + Other IDs necessary for linking data (such as a state ID for linking to student school records)
-  + Relevant identifiable information (such as date of birth, email)
+  + Relevant identifiable information (such as date of birth)
   + Schedule information needed for the study (block, class time, grade level)
   + Consent/Assent received
   + Randomization info (cohort, group)
